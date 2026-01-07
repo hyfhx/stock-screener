@@ -5,6 +5,10 @@
 - 自动检查并创建必要文件
 - 自动初始化数据库
 - 然后运行筛选任务
+
+敏感信息通过环境变量配置：
+- TELEGRAM_BOT_TOKEN: Telegram Bot Token
+- TELEGRAM_CHAT_ID: Telegram Chat ID
 """
 
 import os
@@ -25,35 +29,36 @@ REQUIRED_DIRS = [
     PROJECT_DIR / 'reports/weekly',
 ]
 
-# 默认配置
-DEFAULT_CONFIG = {
-    "screening": {
-        "min_price": 5.0,
-        "max_price": 1000.0,
-        "min_volume": 500000,
-        "min_avg_volume": 1000000,
-        "min_score": 40,
-        "volume_surge_ratio": 1.8,
-        "trend_confirm_days": 3
-    },
-    "weights": {
-        "ma_golden_cross": 30,
-        "macd_golden_cross": 25,
-        "rsi_reversal": 20,
-        "volume_surge": 15,
-        "price_breakout_52w": 20,
-        "price_breakout_20d": 10,
-        "trend_continuation": 15,
-        "obv_confirm": 10
-    },
-    "notification": {
-        "telegram": {
-            "enabled": True,
-            "bot_token": "8361310184:AAHvmfXMITxHVKgFbj1UwqyrALFlmzkoeGM",
-            "chat_id": "8042512219"
+def get_default_config():
+    """获取默认配置，敏感信息从环境变量读取"""
+    return {
+        "screening": {
+            "min_price": 5.0,
+            "max_price": 1000.0,
+            "min_volume": 500000,
+            "min_avg_volume": 1000000,
+            "min_score": 40,
+            "volume_surge_ratio": 1.8,
+            "trend_confirm_days": 3
+        },
+        "weights": {
+            "ma_golden_cross": 30,
+            "macd_golden_cross": 25,
+            "rsi_reversal": 20,
+            "volume_surge": 15,
+            "price_breakout_52w": 20,
+            "price_breakout_20d": 10,
+            "trend_continuation": 15,
+            "obv_confirm": 10
+        },
+        "notification": {
+            "telegram": {
+                "enabled": bool(os.environ.get('TELEGRAM_BOT_TOKEN')),
+                "bot_token": os.environ.get('TELEGRAM_BOT_TOKEN', ''),
+                "chat_id": os.environ.get('TELEGRAM_CHAT_ID', '')
+            }
         }
     }
-}
 
 # 默认优先股票池（标普500+纳斯达克100核心股票）
 DEFAULT_PRIORITY_STOCKS = """# 优先股票池 - 标普500 + 纳斯达克100 核心股票
@@ -179,11 +184,33 @@ def ensure_config():
     """确保配置文件存在"""
     config_path = PROJECT_DIR / 'config.json'
     if not config_path.exists():
+        config = get_default_config()
         with open(config_path, 'w') as f:
-            json.dump(DEFAULT_CONFIG, f, indent=2)
+            json.dump(config, f, indent=2)
         print(f"✓ 配置文件已创建: {config_path}")
     else:
-        print(f"✓ 配置文件已存在: {config_path}")
+        # 更新现有配置中的Telegram设置（从环境变量）
+        try:
+            with open(config_path, 'r') as f:
+                config = json.load(f)
+            
+            # 如果环境变量有设置，更新配置
+            if os.environ.get('TELEGRAM_BOT_TOKEN'):
+                if 'notification' not in config:
+                    config['notification'] = {}
+                if 'telegram' not in config['notification']:
+                    config['notification']['telegram'] = {}
+                config['notification']['telegram']['enabled'] = True
+                config['notification']['telegram']['bot_token'] = os.environ.get('TELEGRAM_BOT_TOKEN')
+                config['notification']['telegram']['chat_id'] = os.environ.get('TELEGRAM_CHAT_ID', '')
+                
+                with open(config_path, 'w') as f:
+                    json.dump(config, f, indent=2)
+                print(f"✓ 配置文件已更新（使用环境变量）: {config_path}")
+            else:
+                print(f"✓ 配置文件已存在: {config_path}")
+        except Exception as e:
+            print(f"⚠ 配置文件读取失败: {e}")
 
 
 def ensure_stock_list():
