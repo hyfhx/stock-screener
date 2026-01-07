@@ -1,0 +1,63 @@
+{
+  "screening": {
+    "min_price": 5.0,
+    "max_price": 500.0,
+    "min_volume": 500000,
+    "volume_surge_ratio": 1.5
+  },
+  "indicators": {
+    "ma_short": 20,
+    "ma_long": 50,
+    "rsi_period": 14,
+    "rsi_oversold": 30,
+    "rsi_overbought": 70
+  },
+  "weights": {
+    "ma_golden_cross": 25,
+    "macd_golden_cross": 20,
+    "rsi_bullish": 15,
+    "volume_surge": 15,
+    "price_breakout": 15,
+    "obv_confirm": 10
+  },
+  "notification": {
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "sender": "",
+      "password": "",
+      "recipients": ["nickreg0810@gmail.com"]
+    },
+    "telegram": {
+      "enabled": true,
+      "bot_token": "8361310184:AAHvmfXMITxHVKgFbj1UwqyrALFlmzkoeGM",
+      "chat_id": "8042512219"
+    }
+  },
+  "schedule": {
+    "hourly_scan": {
+      "enabled": true,
+      "market_hours_only": true,
+      "market_open": "09:30",
+      "market_close": "16:00",
+      "timezone": "America/New_York"
+    },
+    "daily_report": {
+      "enabled": true,
+      "time": "06:00",
+      "timezone": "America/New_York"
+    },
+    "weekly_analysis": {
+      "enabled": true,
+      "day": "friday",
+      "time": "20:00",
+      "timezone": "America/New_York",
+      "auto_optimize": true
+    }
+  },
+  "tracking": {
+    "success_threshold_percent": 3,
+    "tracking_days": 7
+  }
+}

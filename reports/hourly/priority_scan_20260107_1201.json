@@ -1,0 +1,513 @@
+{
+  "timestamp": "2026-01-07T12:01:59.076634",
+  "scan_type": "priority",
+  "stats": {
+    "start_time": "2026-01-07T12:01:29.931980",
+    "end_time": "2026-01-07T12:01:59.073540",
+    "total_stocks": 504,
+    "processed_stocks": 504,
+    "successful_stocks": 31,
+    "failed_stocks": 473,
+    "signals_found": 31,
+    "high_score_count": 1,
+    "avg_time_per_stock_ms": 57.82,
+    "total_runtime_seconds": 29.14,
+    "total_runtime_minutes": 0.49
+  },
+  "results": [
+    {
+      "symbol": "AMGN",
+      "name": "Amgen Inc.",
+      "current_price": 341.84,
+      "change_percent": 3.5345386006169988,
+      "volume": 913784,
+      "avg_volume": 2695989.2,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udd25 MACD\u91d1\u53c9",
+        "\u2705 RSI\u5065\u5eb7 (66.1)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (98.7%)",
+        "\ud83d\udcca OBV\u4e0a\u5347\u786e\u8ba4"
+      ],
+      "score": 72,
+      "timestamp": "2026-01-07 12:01:35.618037"
+    },
+    {
+      "symbol": "BIIB",
+      "name": "Biogen Inc.",
+      "current_price": 184.9,
+      "change_percent": 1.254038323199387,
+      "volume": 608688,
+      "avg_volume": 2281054.4,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udd25 MACD\u91d1\u53c9",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (99.2%)",
+        "\ud83d\udcca OBV\u4e0a\u5347\u786e\u8ba4"
+      ],
+      "score": 67,
+      "timestamp": "2026-01-07 12:01:34.757362"
+    },
+    {
+      "symbol": "ADI",
+      "name": "Analog Devices, Inc.",
+      "current_price": 289.47,
+      "change_percent": -1.184543733353826,
+      "volume": 1053809,
+      "avg_volume": 3311205.45,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udd25 MACD\u91d1\u53c9",
+        "\u2705 RSI\u5065\u5eb7 (61.9)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (98.4%)"
+      ],
+      "score": 62,
+      "timestamp": "2026-01-07 12:01:32.555493"
+    },
+    {
+      "symbol": "BA",
+      "name": "Boeing Company (The)",
+      "current_price": 231.4,
+      "change_percent": 0.6787346358185631,
+      "volume": 4503202,
+      "avg_volume": 7139835.1,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (99.1%)",
+        "\ud83d\udcca OBV\u4e0a\u5347\u786e\u8ba4"
+      ],
+      "score": 57,
+      "timestamp": "2026-01-07 12:01:35.721408"
+    },
+    {
+      "symbol": "AAL",
+      "name": "American Airlines Group, Inc.",
+      "current_price": 16.46,
+      "change_percent": 5.041480024631216,
+      "volume": 35318405,
+      "avg_volume": 53464320.25,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca RSI\u7a81\u783450 (55.7)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (99.8%)",
+        "\ud83d\udcca OBV\u4e0a\u5347\u786e\u8ba4"
+      ],
+      "score": 54,
+      "timestamp": "2026-01-07 12:01:31.427365"
+    },
+    {
+      "symbol": "BDX",
+      "name": "Becton, Dickinson and Company",
+      "current_price": 204.055,
+      "change_percent": -0.6354697148777544,
+      "volume": 683209,
+      "avg_volume": 1964810.45,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (68.0)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (98.7%)"
+      ],
+      "score": 52,
+      "timestamp": "2026-01-07 12:01:35.056644"
+    },
+    {
+      "symbol": "CRM",
+      "name": "Salesforce, Inc.",
+      "current_price": 266.705,
+      "change_percent": 1.4473207272168336,
+      "volume": 2106957,
+      "avg_volume": 6500812.85,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\u2705 RSI\u5065\u5eb7 (64.7)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (99.1%)",
+        "\ud83d\udcca OBV\u4e0a\u5347\u786e\u8ba4"
+      ],
+      "score": 52,
+      "timestamp": "2026-01-07 12:01:39.458699"
+    },
+    {
+      "symbol": "ELV",
+      "name": "Elevance Health, Inc.",
+      "current_price": 368.46,
+      "change_percent": -0.7835837992967789,
+      "volume": 299907,
+      "avg_volume": 1447910.35,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (66.6)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (98.2%)"
+      ],
+      "score": 52,
+      "timestamp": "2026-01-07 12:01:41.076703"
+    },
+    {
+      "symbol": "NTRS",
+      "name": "Northern Trust Corporation",
+      "current_price": 142.69,
+      "change_percent": -0.9922253439050828,
+      "volume": 256064,
+      "avg_volume": 944708.2,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (63.3)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (98.5%)"
+      ],
+      "score": 52,
+      "timestamp": "2026-01-07 12:01:50.460961"
+    },
+    {
+      "symbol": "AZN",
+      "name": "Astrazeneca PLC",
+      "current_price": 95.63,
+      "change_percent": 0.705561206810178,
+      "volume": 2968405,
+      "avg_volume": 4578910.25,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (99.1%)"
+      ],
+      "score": 47,
+      "timestamp": "2026-01-07 12:01:33.792126"
+    },
+    {
+      "symbol": "AME",
+      "name": "AMETEK, Inc.",
+      "current_price": 212.94,
+      "change_percent": -0.5696692385354253,
+      "volume": 338839,
+      "avg_volume": 1314251.95,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (99.2%)"
+      ],
+      "score": 47,
+      "timestamp": "2026-01-07 12:01:34.383185"
+    },
+    {
+      "symbol": "VTRS",
+      "name": "Viatris Inc.",
+      "current_price": 12.46,
+      "change_percent": 0.4838740589964554,
+      "volume": 2231936,
+      "avg_volume": 8590311.8,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (98.3%)",
+        "\ud83d\udcca OBV\u4e0a\u5347\u786e\u8ba4"
+      ],
+      "score": 47,
+      "timestamp": "2026-01-07 12:01:57.670885"
+    },
+    {
+      "symbol": "F",
+      "name": "Ford Motor Company",
+      "current_price": 13.655,
+      "change_percent": -1.0507260052953848,
+      "volume": 19185199,
+      "avg_volume": 43780104.95,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udd25 MACD\u91d1\u53c9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (97.6%)"
+      ],
+      "score": 42,
+      "timestamp": "2026-01-07 12:01:40.799953"
+    },
+    {
+      "symbol": "AMCR",
+      "name": "Amcor plc",
+      "current_price": 8.475,
+      "change_percent": -1.1085145648440735,
+      "volume": 4707224,
+      "avg_volume": 16315381.2,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (59.2)",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (96.9%)"
+      ],
+      "score": 37,
+      "timestamp": "2026-01-07 12:01:33.180757"
+    },
+    {
+      "symbol": "BALL",
+      "name": "Ball Corporation",
+      "current_price": 53.2,
+      "change_percent": -2.025781312184215,
+      "volume": 550350,
+      "avg_volume": 2655147.5,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (63.8)",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (95.7%)"
+      ],
+      "score": 37,
+      "timestamp": "2026-01-07 12:01:34.856738"
+    },
+    {
+      "symbol": "PRU",
+      "name": "Prudential Financial, Inc.",
+      "current_price": 116.61,
+      "change_percent": -0.9008227971784407,
+      "volume": 360233,
+      "avg_volume": 1460196.65,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (98.5%)"
+      ],
+      "score": 37,
+      "timestamp": "2026-01-07 12:01:53.025855"
+    },
+    {
+      "symbol": "RJF",
+      "name": "Raymond James Financial, Inc.",
+      "current_price": 164.987,
+      "change_percent": -2.2936163664292577,
+      "volume": 268837,
+      "avg_volume": 1257136.85,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (56.0)",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (95.4%)"
+      ],
+      "score": 37,
+      "timestamp": "2026-01-07 12:01:53.566546"
+    },
+    {
+      "symbol": "SBUX",
+      "name": "Starbucks Corporation",
+      "current_price": 86.515,
+      "change_percent": -3.2919730769188122,
+      "volume": 3393148,
+      "avg_volume": 8688372.4,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (53.3)",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (95.4%)"
+      ],
+      "score": 37,
+      "timestamp": "2026-01-07 12:01:54.750438"
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "current_price": 244.144,
+      "change_percent": 1.3340005071696637,
+      "volume": 18447044,
+      "avg_volume": 36163022.2,
+      "signals": [
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udcc8 \u8ddd52\u5468\u9ad8\u70b9 5.6%",
+        "\ud83d\udcca OBV\u4e0a\u5347\u786e\u8ba4"
+      ],
+      "score": 35,
+      "timestamp": "2026-01-07 12:01:32.827741"
+    },
+    {
+      "symbol": "DHR",
+      "name": "Danaher Corporation",
+      "current_price": 234.81,
+      "change_percent": -0.7523548609166408,
+      "volume": 810218,
+      "avg_volume": 3016925.9,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (97.7%)"
+      ],
+      "score": 32,
+      "timestamp": "2026-01-07 12:01:38.810599"
+    },
+    {
+      "symbol": "APTV",
+      "name": "Aptiv PLC",
+      "current_price": 81.85,
+      "change_percent": -0.9199862059513594,
+      "volume": 406013,
+      "avg_volume": 1833310.65,
+      "signals": [
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (67.0)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udcc8 \u8ddd52\u5468\u9ad8\u70b9 6.6%"
+      ],
+      "score": 30,
+      "timestamp": "2026-01-07 12:01:33.088599"
+    },
+    {
+      "symbol": "ADP",
+      "name": "Automatic Data Processing, Inc",
+      "current_price": 261.26,
+      "change_percent": 0.05361706703068005,
+      "volume": 489105,
+      "avg_volume": 2251975.25,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca RSI\u7a81\u783450 (48.6)",
+        "\ud83d\udcc8 \u8ddd52\u5468\u9ad8\u70b9 11.0%",
+        "\ud83d\udcca OBV\u4e0a\u5347\u786e\u8ba4"
+      ],
+      "score": 29,
+      "timestamp": "2026-01-07 12:01:31.866795"
+    },
+    {
+      "symbol": "WMT",
+      "name": "Walmart Inc.",
+      "current_price": 113.68,
+      "change_percent": -0.5772226333996348,
+      "volume": 7685543,
+      "avg_volume": 18579432.15,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca RSI\u7a81\u783450 (42.4)",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (96.8%)"
+      ],
+      "score": 29,
+      "timestamp": "2026-01-07 12:01:59.071479"
+    },
+    {
+      "symbol": "ACN",
+      "name": "Accenture plc",
+      "current_price": 272.677,
+      "change_percent": -1.178919567327901,
+      "volume": 1409163,
+      "avg_volume": 3668748.15,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\u2705 RSI\u5065\u5eb7 (50.8)",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (96.8%)"
+      ],
+      "score": 27,
+      "timestamp": "2026-01-07 12:01:31.987670"
+    },
+    {
+      "symbol": "ASTS",
+      "name": "AST SpaceMobile, Inc.",
+      "current_price": 92.5,
+      "change_percent": -5.118471610536344,
+      "volume": 10692817,
+      "avg_volume": 16325585.85,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (64.8)",
+        "\ud83d\udcc8 \u8ddd52\u5468\u9ad8\u70b9 10.0%"
+      ],
+      "score": 27,
+      "timestamp": "2026-01-07 12:01:33.699965"
+    },
+    {
+      "symbol": "STX",
+      "name": "Seagate Technology Holdings PL",
+      "current_price": 303.532,
+      "change_percent": -8.137525674913462,
+      "volume": 2601465,
+      "avg_volume": 4079143.25,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\u2705 RSI\u5065\u5eb7 (55.5)",
+        "\ud83d\udcc8 \u8ddd52\u5468\u9ad8\u70b9 8.6%"
+      ],
+      "score": 27,
+      "timestamp": "2026-01-07 12:01:55.952992"
+    },
+    {
+      "symbol": "BE",
+      "name": "Bloom Energy Corporation",
+      "current_price": 111.5,
+      "change_percent": 8.199899755459588,
+      "volume": 8907159,
+      "avg_volume": 10276427.95,
+      "signals": [
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udcca OBV\u4e0a\u5347\u786e\u8ba4"
+      ],
+      "score": 25,
+      "timestamp": "2026-01-07 12:01:34.615688"
+    },
+    {
+      "symbol": "AVY",
+      "name": "Avery Dennison Corporation",
+      "current_price": 179.97,
+      "change_percent": -1.1371090762891711,
+      "volume": 115194,
+      "avg_volume": 654704.7,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udd25 \u63a5\u8fd152\u5468\u65b0\u9ad8 (95.1%)"
+      ],
+      "score": 22,
+      "timestamp": "2026-01-07 12:01:34.946122"
+    },
+    {
+      "symbol": "HUM",
+      "name": "Humana Inc.",
+      "current_price": 276.68,
+      "change_percent": -1.1292154013878364,
+      "volume": 197274,
+      "avg_volume": 1163498.7,
+      "signals": [
+        "\ud83d\udcc8 \u4ef7\u683c\u5728MA50\u4e0a\u65b9",
+        "\ud83d\udcca MACD\u591a\u5934\u6392\u5217",
+        "\ud83d\udcc8 \u8ddd52\u5468\u9ad8\u70b9 8.6%"
+      ],
+      "score": 22,
+      "timestamp": "2026-01-07 12:01:43.963539"
+    },
+    {
+      "symbol": "A",
+      "name": "Agilent Technologies, Inc.",
+      "current_price": 146.695,
+      "change_percent": -0.6131477412547857,
+      "volume": 603714,
+      "avg_volume": 1957675.7,
+      "signals": [
+        "\u2705 RSI\u5065\u5eb7 (69.3)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udcc8 \u8ddd52\u5468\u9ad8\u70b9 8.5%"
+      ],
+      "score": 20,
+      "timestamp": "2026-01-07 12:01:31.748233"
+    },
+    {
+      "symbol": "AEE",
+      "name": "Ameren Corporation",
+      "current_price": 100.05,
+      "change_percent": -0.5566053145356487,
+      "volume": 185540,
+      "avg_volume": 1796722.0,
+      "signals": [
+        "\u2705 RSI\u5065\u5eb7 (61.2)",
+        "\ud83d\udd25 \u7a81\u7834/\u63a5\u8fd120\u65e5\u9ad8\u70b9",
+        "\ud83d\udcc8 \u8ddd52\u5468\u9ad8\u70b9 6.3%"
+      ],
+      "score": 20,
+      "timestamp": "2026-01-07 12:01:32.951760"
+    }
+  ]
+}

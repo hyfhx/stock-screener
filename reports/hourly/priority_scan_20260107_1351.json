@@ -1,0 +1,197 @@
+{
+  "timestamp": "2026-01-07T13:51:00.610060",
+  "scan_type": "priority_v3",
+  "version": "v3_denoise",
+  "stats": {
+    "start_time": "2026-01-07T13:50:32.203072",
+    "end_time": "2026-01-07T13:51:00.607699",
+    "total_stocks": 504,
+    "processed_stocks": 504,
+    "successful_stocks": 10,
+    "failed_stocks": 494,
+    "signals_found": 10,
+    "high_score_count": 1,
+    "avg_time_per_stock_ms": 56.36,
+    "total_runtime_seconds": 28.4,
+    "total_runtime_minutes": 0.47
+  },
+  "results": [
+    {
+      "symbol": "ADI",
+      "name": "Analog Devices, Inc.",
+      "current_price": 290.305,
+      "change_percent": -0.8995024303426417,
+      "volume": 1685828,
+      "avg_volume": 3342806.4,
+      "signals": [
+        "\ud83d\udcc8 \u5747\u7ebf\u591a\u5934\u6392\u5217",
+        "\ud83d\udd25 MACD\u91d1\u53c9\u786e\u8ba4",
+        "\ud83d\udd25 \u7a81\u783452\u5468\u65b0\u9ad8 (98.7%)",
+        "\ud83d\udcc8 \u5f3a\u52bf\u4e0a\u6da8"
+      ],
+      "score": 75,
+      "trend_strength": "\u5f3a\u52bf\u4e0a\u6da8",
+      "signal_quality": "A\u7ea7\uff08\u5f3a\u70c8\uff09",
+      "timestamp": "2026-01-07 13:50:33.612928"
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "current_price": 245.13,
+      "change_percent": 1.7432480188843413,
+      "volume": 26195727,
+      "avg_volume": 36550456.35,
+      "signals": [
+        "\ud83d\udcca MACD\u591a\u5934\u52a0\u901f",
+        "\ud83d\udcc8 \u63a5\u8fd152\u5468\u65b0\u9ad8 (94.8%)",
+        "\ud83d\udcc8 \u7a81\u783420\u65e5\u9ad8\u70b9",
+        "\ud83d\udcca OBV\u6301\u7eed\u4e0a\u5347",
+        "\ud83d\udcc8 \u5f3a\u52bf\u4e0a\u6da8"
+      ],
+      "score": 57,
+      "trend_strength": "\u5f3a\u52bf\u4e0a\u6da8",
+      "signal_quality": "B\u7ea7\uff08\u8f83\u5f3a\uff09",
+      "timestamp": "2026-01-07 13:50:34.798585"
+    },
+    {
+      "symbol": "ABBV",
+      "name": "AbbVie Inc.",
+      "current_price": 229.27,
+      "change_percent": 2.3846771307452013,
+      "volume": 2507663,
+      "avg_volume": 5472768.15,
+      "signals": [
+        "\ud83d\udd25 MA20/50\u91d1\u53c9\u786e\u8ba4",
+        "\ud83d\udcc8 \u63a5\u8fd152\u5468\u65b0\u9ad8 (93.7%)",
+        "\ud83d\udcca OBV\u6301\u7eed\u4e0a\u5347",
+        "\ud83d\udcc8 \u6e29\u548c\u4e0a\u6da8"
+      ],
+      "score": 55,
+      "trend_strength": "\u6e29\u548c\u4e0a\u6da8",
+      "signal_quality": "B\u7ea7\uff08\u8f83\u5f3a\uff09",
+      "timestamp": "2026-01-07 13:50:33.966698"
+    },
+    {
+      "symbol": "ON",
+      "name": "ON Semiconductor Corporation",
+      "current_price": 61.065,
+      "change_percent": -1.1253211470552902,
+      "volume": 6855339,
+      "avg_volume": 9092921.95,
+      "signals": [
+        "\ud83d\udcc8 \u5747\u7ebf\u591a\u5934\u6392\u5217",
+        "\ud83d\udcca MACD\u591a\u5934\u52a0\u901f",
+        "\ud83d\udcc8 \u63a5\u8fd152\u5468\u65b0\u9ad8 (96.0%)",
+        "\ud83d\udcc8 \u5f3a\u52bf\u4e0a\u6da8"
+      ],
+      "score": 52,
+      "trend_strength": "\u5f3a\u52bf\u4e0a\u6da8",
+      "signal_quality": "B\u7ea7\uff08\u8f83\u5f3a\uff09",
+      "timestamp": "2026-01-07 13:50:54.507731"
+    },
+    {
+      "symbol": "RKLB",
+      "name": "Rocket Lab Corporation",
+      "current_price": 83.665,
+      "change_percent": -2.7490396522776726,
+      "volume": 17955581,
+      "avg_volume": 29872909.05,
+      "signals": [
+        "\ud83d\udcc8 \u5747\u7ebf\u591a\u5934\u6392\u5217",
+        "\ud83d\udcca MACD\u591a\u5934\u52a0\u901f",
+        "\ud83d\udcc8 \u63a5\u8fd152\u5468\u65b0\u9ad8 (97.0%)",
+        "\ud83d\udcc8 \u5f3a\u52bf\u4e0a\u6da8"
+      ],
+      "score": 52,
+      "trend_strength": "\u5f3a\u52bf\u4e0a\u6da8",
+      "signal_quality": "B\u7ea7\uff08\u8f83\u5f3a\uff09",
+      "timestamp": "2026-01-07 13:50:56.230713"
+    },
+    {
+      "symbol": "AAL",
+      "name": "American Airlines Group, Inc.",
+      "current_price": 16.215,
+      "change_percent": 3.4779829039729684,
+      "volume": 61559617,
+      "avg_volume": 54776380.85,
+      "signals": [
+        "\ud83d\udcc8 \u5747\u7ebf\u591a\u5934\u6392\u5217",
+        "\ud83d\udd25 \u7a81\u783452\u5468\u65b0\u9ad8 (98.3%)",
+        "\ud83d\udcc8 \u5f3a\u52bf\u4e0a\u6da8"
+      ],
+      "score": 50,
+      "trend_strength": "\u5f3a\u52bf\u4e0a\u6da8",
+      "signal_quality": "B\u7ea7\uff08\u8f83\u5f3a\uff09",
+      "timestamp": "2026-01-07 13:50:33.418064"
+    },
+    {
+      "symbol": "ADP",
+      "name": "Automatic Data Processing, Inc",
+      "current_price": 261.475,
+      "change_percent": 0.13595469111938396,
+      "volume": 663547,
+      "avg_volume": 2260697.35,
+      "signals": [
+        "\ud83d\udd25 MACD\u91d1\u53c9\u786e\u8ba4",
+        "\ud83d\udcca OBV\u6301\u7eed\u4e0a\u5347",
+        "\ud83d\udcc8 \u5f3a\u52bf\u4e0a\u6da8"
+      ],
+      "score": 50,
+      "trend_strength": "\u5f3a\u52bf\u4e0a\u6da8",
+      "signal_quality": "B\u7ea7\uff08\u8f83\u5f3a\uff09",
+      "timestamp": "2026-01-07 13:50:33.509860"
+    },
+    {
+      "symbol": "APD",
+      "name": "Air Products and Chemicals, In",
+      "current_price": 259.195,
+      "change_percent": 0.3231981327531234,
+      "volume": 644561,
+      "avg_volume": 1845778.05,
+      "signals": [
+        "\ud83d\udcca MACD\u591a\u5934\u52a0\u901f",
+        "\ud83d\udcc8 \u7a81\u783420\u65e5\u9ad8\u70b9",
+        "\ud83d\udcca OBV\u6301\u7eed\u4e0a\u5347",
+        "\ud83d\udcc8 \u5f3a\u52bf\u4e0a\u6da8"
+      ],
+      "score": 47,
+      "trend_strength": "\u5f3a\u52bf\u4e0a\u6da8",
+      "signal_quality": "C\u7ea7\uff08\u4e00\u822c\uff09",
+      "timestamp": "2026-01-07 13:50:35.321332"
+    },
+    {
+      "symbol": "MS",
+      "name": "Morgan Stanley",
+      "current_price": 185.24,
+      "change_percent": -1.3368841544607142,
+      "volume": 1670902,
+      "avg_volume": 4891175.1,
+      "signals": [
+        "\ud83d\udcc8 \u5747\u7ebf\u591a\u5934\u6392\u5217",
+        "\ud83d\udd25 \u7a81\u783452\u5468\u65b0\u9ad8 (98.1%)",
+        "\ud83d\udcc8 \u7a33\u6b65\u4e0a\u6da8"
+      ],
+      "score": 45,
+      "trend_strength": "\u7a33\u6b65\u4e0a\u6da8",
+      "signal_quality": "C\u7ea7\uff08\u4e00\u822c\uff09",
+      "timestamp": "2026-01-07 13:50:50.811265"
+    },
+    {
+      "symbol": "PRU",
+      "name": "Prudential Financial, Inc.",
+      "current_price": 116.6,
+      "change_percent": -0.9093211401338366,
+      "volume": 552608,
+      "avg_volume": 1469815.4,
+      "signals": [
+        "\ud83d\udcc8 \u5747\u7ebf\u591a\u5934\u6392\u5217",
+        "\ud83d\udd25 \u7a81\u783452\u5468\u65b0\u9ad8 (98.5%)",
+        "\ud83d\udcc8 \u7a33\u6b65\u4e0a\u6da8"
+      ],
+      "score": 45,
+      "trend_strength": "\u7a33\u6b65\u4e0a\u6da8",
+      "signal_quality": "C\u7ea7\uff08\u4e00\u822c\uff09",
+      "timestamp": "2026-01-07 13:50:55.018445"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; }
+        .summary-box { background: #f8f9fa; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .stat { display: inline-block; margin: 10px 20px 10px 0; }
+        .stat-value { font-size: 24px; font-weight: bold; color: #3498db; }
+        .stat-label { font-size: 12px; color: #666; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th { background: #3498db; color: white; padding: 12px; text-align: left; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+        tr:hover { background: #f5f5f5; }
+        .score-high { color: #27ae60; font-weight: bold; }
+        .score-medium { color: #f39c12; font-weight: bold; }
+        .score-low { color: #95a5a6; }
+        .change-positive { color: #27ae60; }
+        .change-negative { color: #e74c3c; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
+        .warning { background: #fff3cd; border: 1px solid #ffc107; padding: 10px; border-radius: 4px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>📊 股票筛选日报 - 2026-01-07</h1>
+    
+    <div class="summary-box">
+        <div class="stat">
+            <div class="stat-value">19</div>
+            <div class="stat-label">发现潜力股</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">3</div>
+            <div class="stat-label">高分股票 (≥70)</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">38.7</div>
+            <div class="stat-label">平均评分</div>
+        </div>
+    </div>
+
+    <h2>🏆 今日潜力股 Top 20</h2>
+    <table>
+        <tr>
+            <th>排名</th>
+            <th>股票</th>
+            <th>价格</th>
+            <th>涨跌</th>
+            <th>评分</th>
+            <th>信号</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><strong>QCOM</strong><br><small>QUALCOMM Incorporated</small></td>
+            <td>$182.45</td>
+            <td class="change-positive">+3.48%</td>
+            <td class="score-high">89</td>
+            <td><small>📈 价格在MA50上方运行 | 🔥 MACD金叉 | 📈 MACD柱状图转正</small></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td><strong>TEST</strong><br><small>Test Stock</small></td>
+            <td>$100.00</td>
+            <td class="change-positive">+2.50%</td>
+            <td class="score-high">75</td>
+            <td><small>测试信号1 | 测试信号2</small></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td><strong>MU</strong><br><small>Micron Technology, Inc.</small></td>
+            <td>$343.43</td>
+            <td class="change-positive">+10.02%</td>
+            <td class="score-high">72</td>
+            <td><small>📈 价格在MA50上方运行 | 📊 MACD多头排列 | 🔥 成交量放大 1.6倍</small></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td><strong>AFRM</strong><br><small>Affirm Holdings, Inc.</small></td>
+            <td>$82.35</td>
+            <td class="change-positive">+1.92%</td>
+            <td class="score-medium">52</td>
+            <td><small>📈 价格在MA50上方运行 | 📊 MACD多头排列 | 🚀 接近/突破20日高点</small></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td><strong>AMZN</strong><br><small>Amazon.com, Inc.</small></td>
+            <td>$240.93</td>
+            <td class="change-positive">+3.38%</td>
+            <td class="score-medium">47</td>
+            <td><small>📊 MACD多头排列 | 📊 成交量温和放大 1.5倍 | 🚀 接近/突破20日高点</small></td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td><strong>UPST</strong><br><small>Upstart Holdings, Inc.</small></td>
+            <td>$50.68</td>
+            <td class="change-negative">-0.04%</td>
+            <td class="score-medium">42</td>
+            <td><small>📈 价格在MA50上方运行 | 🔥 MACD金叉 | 📈 MACD柱状图转正</small></td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td><strong>SNOW</strong><br><small>Snowflake Inc.</small></td>
+            <td>$234.53</td>
+            <td class="change-positive">+4.53%</td>
+            <td class="score-medium">42</td>
+            <td><small>✅ RSI健康 (68.5) | 📊 成交量温和放大 1.2倍 | 🚀 接近/突破20日高点</small></td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td><strong>PANW</strong><br><small>Palo Alto Networks, Inc.</small></td>
+            <td>$185.86</td>
+            <td class="change-positive">+2.05%</td>
+            <td class="score-medium">40</td>
+            <td><small>🔥 MACD金叉 | 📈 MACD柱状图转正 | 📈 距52周高点 16.9%</small></td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td><strong>NET</strong><br><small>Cloudflare, Inc.</small></td>
+            <td>$198.00</td>
+            <td class="change-positive">+0.17%</td>
+            <td class="score-low">32</td>
+            <td><small>📈 RSI从超卖区反弹 (52.4) | 📊 成交量温和放大 1.3倍 | 📊 OBV上升确认</small></td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td><strong>MRVL</strong><br><small>Marvell Technology, Inc.</small></td>
+            <td>$88.23</td>
+            <td class="change-negative">-2.22%</td>
+            <td class="score-low">30</td>
+            <td><small>📊 MACD多头排列 | ✅ RSI健康 (59.3) | 🔥 成交量放大 1.5倍</small></td>
+        </tr>
+
+        <tr>
+            <td>11</td>
+            <td><strong>AVGO</strong><br><small>Broadcom Inc.</small></td>
+            <td>$343.77</td>
+            <td class="change-positive">+0.10%</td>
+            <td class="score-low">30</td>
+            <td><small>📈 RSI从超卖区反弹 (53.5) | 📈 距52周高点 17.1% | 📊 OBV上升确认</small></td>
+        </tr>
+
+        <tr>
+            <td>12</td>
+            <td><strong>CRM</strong><br><small>Salesforce, Inc.</small></td>
+            <td>$262.90</td>
+            <td class="change-positive">+2.59%</td>
+            <td class="score-low">29</td>
+            <td><small>📈 价格在MA50上方运行 | 📊 RSI突破50 (61.4) | 📊 OBV上升确认</small></td>
+        </tr>
+
+        <tr>
+            <td>13</td>
+            <td><strong>SOFI</strong><br><small>SoFi Technologies, Inc.</small></td>
+            <td>$26.98</td>
+            <td class="change-negative">-7.86%</td>
+            <td class="score-low">25</td>
+            <td><small>✅ RSI健康 (55.1) | 🔥 成交量放大 2.5倍 | 📈 距52周高点 17.6%</small></td>
+        </tr>
+
+        <tr>
+            <td>14</td>
+            <td><strong>NOW</strong><br><small>ServiceNow, Inc.</small></td>
+            <td>$148.81</td>
+            <td class="change-positive">+0.82%</td>
+            <td class="score-low">25</td>
+            <td><small>📈 RSI从超卖区反弹 (41.3) | 📊 OBV上升确认</small></td>
+        </tr>
+
+        <tr>
+            <td>15</td>
+            <td><strong>SMCI</strong><br><small>Super Micro Computer, Inc</small></td>
+            <td>$30.54</td>
+            <td class="change-positive">+1.56%</td>
+            <td class="score-low">22</td>
+            <td><small>📈 RSI从超卖区反弹 (45.6) | 📊 成交量温和放大 1.3倍</small></td>
+        </tr>
+
+        <tr>
+            <td>16</td>
+            <td><strong>RIVN</strong><br><small>Rivian Automotive, Inc.</small></td>
+            <td>$19.53</td>
+            <td class="change-negative">-0.31%</td>
+            <td class="score-low">22</td>
+            <td><small>📈 价格在MA50上方运行 | ✅ RSI健康 (54.4) | 📈 距52周高点 13.9%</small></td>
+        </tr>
+
+        <tr>
+            <td>17</td>
+            <td><strong>MSTR</strong><br><small>Strategy Inc</small></td>
+            <td>$157.97</td>
+            <td class="change-negative">-4.10%</td>
+            <td class="score-low">22</td>
+            <td><small>📈 RSI从超卖区反弹 (46.3) | 📊 成交量温和放大 1.2倍</small></td>
+        </tr>
+
+        <tr>
+            <td>18</td>
+            <td><strong>NVDA</strong><br><small>NVIDIA Corporation</small></td>
+            <td>$187.24</td>
+            <td class="change-negative">-0.47%</td>
+            <td class="score-low">20</td>
+            <td><small>📊 MACD多头排列 | ✅ RSI健康 (64.8) | 📈 距52周高点 11.8%</small></td>
+        </tr>
+
+        <tr>
+            <td>19</td>
+            <td><strong>CRWD</strong><br><small>CrowdStrike Holdings, Inc</small></td>
+            <td>$458.32</td>
+            <td class="change-positive">+0.39%</td>
+            <td class="score-low">20</td>
+            <td><small>📈 RSI从超卖区反弹 (30.6) | 📈 距52周高点 19.2%</small></td>
+        </tr>
+
+    </table>
+
+    <div class="warning">
+        ⚠️ <strong>风险提示</strong>：以上内容仅为技术分析参考，不构成投资建议。
+    </div>
+    
+    <div class="footer">
+        <p>生成时间: 2026-01-07 03:41:07</p>
+    </div>
+</body>
+</html>

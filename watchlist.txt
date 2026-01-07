@@ -1,0 +1,47 @@
+# 自定义股票池
+# 每行一个股票代码，#开头为注释
+
+# 科技巨头
+AAPL
+MSFT
+GOOGL
+AMZN
+META
+NVDA
+TSLA
+
+# AI/半导体
+AMD
+AVGO
+QCOM
+MU
+SMCI
+ARM
+MRVL
+
+# 云计算/软件
+CRM
+NOW
+SNOW
+PLTR
+CRWD
+PANW
+NET
+
+# 热门成长股
+COIN
+HOOD
+MSTR
+SOFI
+AFRM
+UPST
+
+# 电动车
+RIVN
+LCID
+NIO
+XPEV
+LI
+
+# 你关注的MU
+MU
