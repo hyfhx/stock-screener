@@ -269,7 +269,33 @@ class StockScreener:
     
     def load_stock_list(self, file_path: str = None) -> List[str]:
         """加载股票列表"""
-        # 默认股票列表
+        # 尝试的文件路径列表
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        possible_paths = [
+            file_path,
+            os.path.join(script_dir, 'priority_stocks.txt'),
+            os.path.join(script_dir, 'watchlist.txt'),
+            'priority_stocks.txt',
+            'watchlist.txt'
+        ]
+        
+        # 尝试从文件加载
+        for path in possible_paths:
+            if path and os.path.exists(path):
+                try:
+                    with open(path, 'r') as f:
+                        stocks = []
+                        for line in f:
+                            line = line.strip()
+                            if line and not line.startswith('#'):
+                                stocks.append(line.upper())
+                        if stocks:
+                            print(f"📋 从 {os.path.basename(path)} 加载了 {len(stocks)} 只股票")
+                            return stocks
+                except Exception as e:
+                    print(f"⚠ 加载股票列表失败: {e}")
+        
+        # 默认股票列表（备用）
         default_stocks = [
             # 科技巨头
             "AAPL", "MSFT", "GOOGL", "AMZN", "META", "NVDA", "TSLA",
@@ -292,20 +318,7 @@ class StockScreener:
             # 热门成长股
             "COIN", "SQ", "SHOP", "ROKU", "UBER", "ABNB"
         ]
-        
-        if file_path and os.path.exists(file_path):
-            try:
-                with open(file_path, 'r') as f:
-                    stocks = []
-                    for line in f:
-                        line = line.strip()
-                        if line and not line.startswith('#'):
-                            stocks.append(line.upper())
-                    if stocks:
-                        return stocks
-            except Exception as e:
-                print(f"⚠ 加载股票列表失败: {e}")
-        
+        print(f"📋 使用默认股票列表 ({len(default_stocks)} 只)")
         return default_stocks
     
     def run(self, stock_list: List[str] = None) -> List[Dict]:

@@ -8,8 +8,19 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
 
-# Python命令
-PYTHON_CMD="python3"
+# 自动检测Python版本
+if command -v python3.11 &> /dev/null; then
+    PYTHON_CMD="python3.11"
+elif command -v /opt/homebrew/bin/python3.11 &> /dev/null; then
+    PYTHON_CMD="/opt/homebrew/bin/python3.11"
+elif command -v /opt/homebrew/bin/python3 &> /dev/null; then
+    PYTHON_CMD="/opt/homebrew/bin/python3"
+elif command -v python3 &> /dev/null; then
+    PYTHON_CMD="python3"
+else
+    echo "❌ 未找到Python3，请先安装: brew install python@3.11"
+    exit 1
+fi
 
 # launchd plist文件路径
 PLIST_NAME="com.stockscreener.daily"
