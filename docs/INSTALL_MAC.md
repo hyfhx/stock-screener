@@ -85,7 +85,8 @@ stock-screener/
 ├── screener.sh           # 控制脚本（日常使用）
 ├── screener_local.py     # 筛选程序
 ├── config.json           # 配置文件（自动创建）
-├── priority_stocks.txt   # 股票列表
+├── lists/                # 股票列表
+│   └── priority_stocks.txt
 ├── data/                 # 数据目录（自动创建）
 │   └── screener.db       # SQLite数据库
 ├── logs/                 # 日志目录（自动创建）

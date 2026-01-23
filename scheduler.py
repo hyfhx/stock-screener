@@ -25,20 +25,29 @@ from data_store import DataStore, PerformanceTracker
 from daily_report import DailyReporter
 from weekly_analysis import WeeklyAnalyzer
 
+PROJECT_DIR = Path(__file__).resolve().parent
+LOG_DIR = PROJECT_DIR / 'logs'
+LISTS_DIR = PROJECT_DIR / 'lists'
+DATA_DIR = PROJECT_DIR / 'data'
+REPORTS_DIR = PROJECT_DIR / 'reports'
+LOG_DIR.mkdir(exist_ok=True)
+DATA_DIR.mkdir(exist_ok=True)
+REPORTS_DIR.mkdir(exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('/home/ubuntu/stock_screener/scheduler.log'),
+        logging.FileHandler(LOG_DIR / 'scheduler.log'),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
-CONFIG_PATH = '/home/ubuntu/stock_screener/config.json'
-PRIORITY_STOCKS_PATH = '/home/ubuntu/stock_screener/priority_stocks.txt'
-ALL_PRIORITY_STOCKS_PATH = '/home/ubuntu/stock_screener/all_priority_stocks.txt'
-ALL_US_STOCKS_PATH = '/home/ubuntu/stock_screener/all_us_stocks.txt'
+CONFIG_PATH = str(PROJECT_DIR / 'config.json')
+PRIORITY_STOCKS_PATH = str(LISTS_DIR / 'priority_stocks.txt')
+ALL_PRIORITY_STOCKS_PATH = str(LISTS_DIR / 'all_priority_stocks.txt')
+ALL_US_STOCKS_PATH = str(LISTS_DIR / 'all_us_stocks.txt')
 
 
 def load_config() -> dict:
@@ -148,7 +157,7 @@ def run_priority_scan():
         
         # 保存报告文件
         timestamp = datetime.now().strftime('%Y%m%d_%H%M')
-        report_dir = Path('/home/ubuntu/stock_screener/reports/hourly')
+        report_dir = REPORTS_DIR / 'hourly'
         report_dir.mkdir(parents=True, exist_ok=True)
         
         report_path = report_dir / f"priority_scan_{timestamp}.json"
@@ -162,7 +171,7 @@ def run_priority_scan():
             }, f, indent=2, default=str)
     
     # 保存运行时间统计
-    runtime_log_path = Path('/home/ubuntu/stock_screener/runtime_history.json')
+    runtime_log_path = DATA_DIR / 'runtime_history.json'
     runtime_history = []
     if runtime_log_path.exists():
         try:
@@ -257,7 +266,7 @@ def run_extended_scan():
         
         # 保存报告
         timestamp = datetime.now().strftime('%Y%m%d_%H%M')
-        report_dir = Path('/home/ubuntu/stock_screener/reports/daily')
+        report_dir = REPORTS_DIR / 'daily'
         report_dir.mkdir(parents=True, exist_ok=True)
         
         report_path = report_dir / f"extended_scan_{timestamp}.json"

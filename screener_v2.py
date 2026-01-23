@@ -24,12 +24,22 @@ import threading
 
 from data_api import ApiClient
 
+PROJECT_DIR = Path(__file__).resolve().parent
+LOG_DIR = PROJECT_DIR / 'logs'
+LISTS_DIR = PROJECT_DIR / 'lists'
+REPORTS_DIR = PROJECT_DIR / 'reports'
+DATA_DIR = PROJECT_DIR / 'data'
+LOG_DIR.mkdir(exist_ok=True)
+REPORTS_DIR.mkdir(exist_ok=True)
+DATA_DIR.mkdir(exist_ok=True)
+LISTS_DIR.mkdir(exist_ok=True)
+
 # 配置日志
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('/home/ubuntu/stock_screener/screener.log'),
+        logging.FileHandler(LOG_DIR / 'screener.log'),
         logging.StreamHandler()
     ]
 )
@@ -454,7 +464,7 @@ def load_stock_list(path: str) -> List[str]:
 def load_config() -> Dict:
     """加载配置"""
     try:
-        with open('/home/ubuntu/stock_screener/config.json', 'r') as f:
+        with open(PROJECT_DIR / 'config.json', 'r') as f:
             return json.load(f)
     except:
         return {}
@@ -498,12 +508,12 @@ def main():
     if args.symbols:
         symbols = [s.upper() for s in args.symbols]
     elif args.all:
-        symbols = load_stock_list('/home/ubuntu/stock_screener/all_us_stocks.txt')
+        symbols = load_stock_list(str(LISTS_DIR / 'all_us_stocks.txt'))
     elif args.watchlist:
         symbols = load_stock_list(args.watchlist)
     else:
         # 默认使用全美股
-        symbols = load_stock_list('/home/ubuntu/stock_screener/all_us_stocks.txt')
+        symbols = load_stock_list(str(LISTS_DIR / 'all_us_stocks.txt'))
         if not symbols:
             # 回退到默认列表
             symbols = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'TSLA', 'AMD', 'MU', 'QCOM']
@@ -523,7 +533,7 @@ def main():
     print(format_runtime_report(stats))
     
     # 保存运行时间统计
-    stats_path = '/home/ubuntu/stock_screener/runtime_stats.json'
+    stats_path = str(PROJECT_DIR / 'data' / 'runtime_stats.json')
     with open(stats_path, 'w') as f:
         json.dump(stats.to_dict(), f, indent=2)
     logger.info(f"运行时间统计已保存: {stats_path}")
@@ -538,7 +548,7 @@ def main():
             print()
     
     # 保存完整报告
-    report_path = '/home/ubuntu/stock_screener/report_v2.json'
+    report_path = str(REPORTS_DIR / 'report_v2.json')
     with open(report_path, 'w') as f:
         json.dump({
             'timestamp': datetime.now().isoformat(),

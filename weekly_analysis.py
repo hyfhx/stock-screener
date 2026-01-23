@@ -24,6 +24,10 @@ from collections import defaultdict
 
 from data_store import DataStore, PerformanceTracker
 
+PROJECT_DIR = Path(__file__).resolve().parent
+REPORTS_DIR = PROJECT_DIR / 'reports'
+WEEKLY_REPORT_DIR = REPORTS_DIR / 'weekly'
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -65,7 +69,8 @@ class TelegramNotifier:
 class WeeklyAnalyzer:
     """每周分析器"""
     
-    def __init__(self, config_path: str = '/home/ubuntu/stock_screener/config.json'):
+    def __init__(self, config_path: str = None):
+        config_path = config_path or str(PROJECT_DIR / 'config.json')
         self.store = DataStore()
         self.tracker = PerformanceTracker()
         self.config = self._load_config(config_path)
@@ -593,10 +598,8 @@ class WeeklyAnalyzer:
         print(report)
         
         # 5. 保存报告
-        report_dir = Path('/home/ubuntu/stock_screener/reports/weekly')
-        report_dir.mkdir(parents=True, exist_ok=True)
-        
-        report_path = report_dir / f"weekly_analysis_{analysis['week_end']}.txt"
+        WEEKLY_REPORT_DIR.mkdir(parents=True, exist_ok=True)
+        report_path = WEEKLY_REPORT_DIR / f"weekly_analysis_{analysis['week_end']}.txt"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(report)
         logger.info(f"报告已保存: {report_path}")

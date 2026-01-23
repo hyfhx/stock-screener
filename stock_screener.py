@@ -17,17 +17,24 @@ import logging
 from datetime import datetime, timedelta
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from pathlib import Path
 from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass
 from data_api import ApiClient
 import numpy as np
+
+PROJECT_DIR = Path(__file__).resolve().parent
+LOG_DIR = PROJECT_DIR / 'logs'
+REPORTS_DIR = PROJECT_DIR / 'reports'
+LOG_DIR.mkdir(exist_ok=True)
+REPORTS_DIR.mkdir(exist_ok=True)
 
 # 配置日志
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('/home/ubuntu/stock_screener/screener.log'),
+        logging.FileHandler(LOG_DIR / 'screener.log'),
         logging.StreamHandler()
     ]
 )
@@ -529,7 +536,7 @@ def main():
     parser = argparse.ArgumentParser(description='股票筛选盯盘程序')
     parser.add_argument('--symbols', nargs='+', help='要筛选的股票代码列表')
     parser.add_argument('--watchlist', type=str, help='股票代码文件路径')
-    parser.add_argument('--output', type=str, default='/home/ubuntu/stock_screener/report.txt',
+    parser.add_argument('--output', type=str, default=str(REPORTS_DIR / 'report.txt'),
                         help='报告输出路径')
     parser.add_argument('--email', action='store_true', help='是否发送邮件')
     parser.add_argument('--smtp-server', type=str, default='smtp.gmail.com')

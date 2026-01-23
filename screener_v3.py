@@ -25,11 +25,19 @@ import threading
 
 from data_api import ApiClient
 
+PROJECT_DIR = Path(__file__).resolve().parent
+LOG_DIR = PROJECT_DIR / 'logs'
+LISTS_DIR = PROJECT_DIR / 'lists'
+REPORTS_DIR = PROJECT_DIR / 'reports'
+LOG_DIR.mkdir(exist_ok=True)
+REPORTS_DIR.mkdir(exist_ok=True)
+LISTS_DIR.mkdir(exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('/home/ubuntu/stock_screener/screener.log'),
+        logging.FileHandler(LOG_DIR / 'screener.log'),
         logging.StreamHandler()
     ]
 )
@@ -537,7 +545,7 @@ def load_stock_list(path: str) -> List[str]:
 def load_config() -> Dict:
     """加载配置"""
     try:
-        with open('/home/ubuntu/stock_screener/config.json', 'r') as f:
+        with open(PROJECT_DIR / 'config.json', 'r') as f:
             return json.load(f)
     except:
         return {}
@@ -560,9 +568,9 @@ def main():
     elif args.watchlist:
         symbols = load_stock_list(args.watchlist)
     else:
-        symbols = load_stock_list('/home/ubuntu/stock_screener/all_priority_stocks.txt')
+        symbols = load_stock_list(str(LISTS_DIR / 'all_priority_stocks.txt'))
         if not symbols:
-            symbols = load_stock_list('/home/ubuntu/stock_screener/priority_stocks.txt')
+            symbols = load_stock_list(str(LISTS_DIR / 'priority_stocks.txt'))
     
     if args.limit:
         symbols = symbols[:args.limit]
@@ -592,7 +600,7 @@ def main():
             print()
     
     # 保存报告
-    report_path = '/home/ubuntu/stock_screener/report_v3.json'
+    report_path = str(REPORTS_DIR / 'report_v3.json')
     with open(report_path, 'w') as f:
         json.dump({
             'timestamp': datetime.now().isoformat(),

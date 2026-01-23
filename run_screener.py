@@ -19,12 +19,20 @@ from typing import List, Dict
 # 导入主筛选程序
 from stock_screener import StockScreener, AlertNotifier, StockSignal, DEFAULT_WATCHLIST
 
+PROJECT_DIR = Path(__file__).resolve().parent
+LOG_DIR = PROJECT_DIR / 'logs'
+LISTS_DIR = PROJECT_DIR / 'lists'
+REPORTS_DIR = PROJECT_DIR / 'reports'
+LOG_DIR.mkdir(exist_ok=True)
+REPORTS_DIR.mkdir(exist_ok=True)
+LISTS_DIR.mkdir(exist_ok=True)
+
 # 配置日志
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('/home/ubuntu/stock_screener/scheduler.log'),
+        logging.FileHandler(LOG_DIR / 'scheduler.log'),
         logging.StreamHandler()
     ]
 )
@@ -95,7 +103,7 @@ class TelegramNotifier:
 
 def load_config() -> Dict:
     """加载配置文件"""
-    config_path = Path('/home/ubuntu/stock_screener/config.json')
+    config_path = PROJECT_DIR / 'config.json'
     if config_path.exists():
         with open(config_path, 'r') as f:
             return json.load(f)
@@ -104,7 +112,7 @@ def load_config() -> Dict:
 
 def load_watchlist() -> List[str]:
     """加载股票池"""
-    watchlist_path = Path('/home/ubuntu/stock_screener/watchlist.txt')
+    watchlist_path = LISTS_DIR / 'watchlist.txt'
     if watchlist_path.exists():
         with open(watchlist_path, 'r') as f:
             symbols = []
@@ -158,8 +166,7 @@ def run_screening():
     
     # 保存报告
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    report_path = f'/home/ubuntu/stock_screener/reports/report_{timestamp}.txt'
-    Path('/home/ubuntu/stock_screener/reports').mkdir(exist_ok=True)
+    report_path = str(REPORTS_DIR / f'report_{timestamp}.txt')
     notifier.save_report(results, report_path)
     
     # 控制台输出

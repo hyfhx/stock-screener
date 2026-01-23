@@ -18,11 +18,11 @@ from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, asdict
 from data_api import ApiClient
 
+PROJECT_DIR = Path(__file__).resolve().parent
+DB_PATH = str(PROJECT_DIR / 'data' / 'screener.db')
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
-
-DB_PATH = '/home/ubuntu/stock_screener/data/screener.db'
-
 
 class DataStore:
     """数据存储类"""

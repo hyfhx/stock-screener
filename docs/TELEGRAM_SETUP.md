@@ -44,7 +44,7 @@
 运行以下命令测试 Telegram 通知：
 
 ```bash
-cd /home/ubuntu/stock_screener
+cd /path/to/stock-screener
 python3 test_notification.py --telegram
 ```
 

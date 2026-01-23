@@ -6,8 +6,8 @@
   },
   "watchlist": {
     "use_priority": true,
-    "priority_file": "priority_stocks.txt",
-    "extended_file": "all_us_stocks.txt"
+    "priority_file": "lists/priority_stocks.txt",
+    "extended_file": "lists/all_us_stocks.txt"
   },
   "notification": {
     "email": {

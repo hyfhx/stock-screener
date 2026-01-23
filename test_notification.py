@@ -14,10 +14,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from pathlib import Path
 
+PROJECT_DIR = Path(__file__).resolve().parent
+
 
 def load_config():
     """加载配置"""
-    config_path = Path('/home/ubuntu/stock_screener/config.json')
+    config_path = PROJECT_DIR / 'config.json'
     if config_path.exists():
         with open(config_path, 'r') as f:
             return json.load(f)

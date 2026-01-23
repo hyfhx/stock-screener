@@ -18,7 +18,8 @@ import subprocess
 from pathlib import Path
 
 # 项目根目录
-PROJECT_DIR = Path('/home/ubuntu/stock_screener')
+PROJECT_DIR = Path(__file__).resolve().parent
+LISTS_DIR = PROJECT_DIR / 'lists'
 
 # 必要的目录
 REQUIRED_DIRS = [
@@ -27,6 +28,8 @@ REQUIRED_DIRS = [
     PROJECT_DIR / 'reports/hourly',
     PROJECT_DIR / 'reports/daily',
     PROJECT_DIR / 'reports/weekly',
+    PROJECT_DIR / 'logs',
+    LISTS_DIR,
 ]
 
 def get_default_config():
@@ -216,7 +219,7 @@ def ensure_config():
 def ensure_stock_list():
     """确保股票列表文件存在"""
     # 优先股票池
-    priority_path = PROJECT_DIR / 'priority_stocks.txt'
+    priority_path = LISTS_DIR / 'priority_stocks.txt'
     if not priority_path.exists():
         with open(priority_path, 'w') as f:
             f.write(DEFAULT_PRIORITY_STOCKS)
@@ -225,7 +228,7 @@ def ensure_stock_list():
         print(f"✓ 股票列表已存在: {priority_path}")
     
     # all_priority_stocks.txt（如果不存在，复制priority_stocks.txt）
-    all_priority_path = PROJECT_DIR / 'all_priority_stocks.txt'
+    all_priority_path = LISTS_DIR / 'all_priority_stocks.txt'
     if not all_priority_path.exists():
         with open(all_priority_path, 'w') as f:
             f.write(DEFAULT_PRIORITY_STOCKS)

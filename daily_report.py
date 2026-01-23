@@ -22,6 +22,10 @@ from collections import Counter
 
 from data_store import DataStore
 
+PROJECT_DIR = Path(__file__).resolve().parent
+REPORTS_DIR = PROJECT_DIR / 'reports'
+DAILY_REPORT_DIR = REPORTS_DIR / 'daily'
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -64,7 +68,8 @@ class TelegramNotifier:
 class DailyReporter:
     """每日报告生成器"""
     
-    def __init__(self, config_path: str = '/home/ubuntu/stock_screener/config.json'):
+    def __init__(self, config_path: str = None):
+        config_path = config_path or str(PROJECT_DIR / 'config.json')
         self.store = DataStore()
         self.config = self._load_config(config_path)
     
@@ -327,10 +332,8 @@ class DailyReporter:
             return summary
         
         # 保存报告文件
-        report_dir = Path('/home/ubuntu/stock_screener/reports/daily')
-        report_dir.mkdir(parents=True, exist_ok=True)
-        
-        report_path = report_dir / f"daily_report_{summary['date']}.html"
+        DAILY_REPORT_DIR.mkdir(parents=True, exist_ok=True)
+        report_path = DAILY_REPORT_DIR / f"daily_report_{summary['date']}.html"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(self.format_email_html(summary))
         logger.info(f"报告已保存: {report_path}")

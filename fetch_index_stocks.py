@@ -14,6 +14,10 @@ import json
 import logging
 from pathlib import Path
 
+PROJECT_DIR = Path(__file__).resolve().parent
+LISTS_DIR = PROJECT_DIR / 'lists'
+LISTS_DIR.mkdir(exist_ok=True)
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -121,7 +125,7 @@ HOT_GROWTH_SYMBOLS = [
 
 def save_stock_lists():
     """保存各指数股票列表"""
-    output_dir = Path('/home/ubuntu/stock_screener')
+    output_dir = LISTS_DIR
     
     # 去重并合并
     sp500_set = set(SP500_SYMBOLS)

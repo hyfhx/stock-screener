@@ -18,6 +18,10 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 import time
 
+PROJECT_DIR = Path(__file__).resolve().parent
+REPORTS_DIR = PROJECT_DIR / 'reports'
+REPORTS_DIR.mkdir(exist_ok=True)
+
 # 尝试导入依赖
 try:
     import yfinance as yf
@@ -271,10 +275,11 @@ class StockScreener:
         """加载股票列表"""
         # 尝试的文件路径列表
         script_dir = os.path.dirname(os.path.abspath(__file__))
+        lists_dir = os.path.join(script_dir, 'lists')
         possible_paths = [
             file_path,
-            os.path.join(script_dir, 'priority_stocks.txt'),
-            os.path.join(script_dir, 'watchlist.txt'),
+            os.path.join(lists_dir, 'priority_stocks.txt'),
+            os.path.join(lists_dir, 'watchlist.txt'),
             'priority_stocks.txt',
             'watchlist.txt'
         ]
@@ -393,7 +398,7 @@ class StockScreener:
     def save_results(self, output_dir: str = None):
         """保存结果到文件"""
         if output_dir is None:
-            output_dir = os.path.dirname(os.path.abspath(__file__))
+            output_dir = str(REPORTS_DIR)
         
         output_dir = Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)

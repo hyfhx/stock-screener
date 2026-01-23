@@ -16,6 +16,10 @@ from pathlib import Path
 from typing import List, Dict
 import json
 
+PROJECT_DIR = Path(__file__).resolve().parent
+LISTS_DIR = PROJECT_DIR / 'lists'
+LISTS_DIR.mkdir(exist_ok=True)
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -167,7 +171,7 @@ def main():
     filtered_stocks = filter_tradable_stocks(unique_stocks)
     
     # 保存
-    output_path = '/home/ubuntu/stock_screener/all_us_stocks.txt'
+    output_path = str(LISTS_DIR / 'all_us_stocks.txt')
     save_stock_list(filtered_stocks, output_path)
     
     # 统计
